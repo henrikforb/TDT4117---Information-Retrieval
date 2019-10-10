@@ -1,11 +1,39 @@
 """
-Load and process (clean, tokenize and stem) data
+Data loading and preprocessing.
+This module clean, tokenize and stem data
 """
 
-import random; random.seed(123)
+import random
 import codecs
+from nltk import tokenize
 
 
-# Open and load the file using codecs
-f = codecs.open("pg3300.txt", "r", "utf-8")
+random.seed(123)
 
+def text_to_paragraphs(file):
+    """Partition file into separate paragraphs
+    
+    Arguments:
+        file {[String]} -- [Textfile]
+    
+    Returns:
+        [List] -- [List of paragraphs]
+    """
+
+    f = codecs.open("pg3300.txt", "r", "utf-8")
+    # Open, read and decode the file on utf-8-standard
+
+    paragraphs = []
+    paragraph = ""
+
+    for line in f:
+        paragraph += line
+        if line.isspace():
+            if line != "":
+                paragraphs.append(paragraph)
+            paragraph = ""
+            continue
+
+    return paragraphs
+
+def filter_paragraphs(file)
