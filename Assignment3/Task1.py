@@ -36,4 +36,15 @@ def text_to_paragraphs(file):
 
     return paragraphs
 
-def filter_paragraphs(file)
+def filter_paragraphs(para):
+    """Remove paragraphs containing the word "Gutenberg"
+    
+    Arguments:
+        para {[List[String]]}
+    
+    Returns:
+        [List[String]] 
+    """
+    filter_obj = (filter(lambda p: "Gutenberg" not in p, para))
+    return list(filter_obj)
+    
