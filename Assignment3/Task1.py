@@ -13,17 +13,13 @@ random.seed(123)
 
 
 # Task 1.1 - 1.2
-def text_to_paragraphs(file):
-    """Partition file into separate paragraphs
-    
-    Arguments:
-        file {[String]} -- [Textfile]
-    
-    Returns:
-        [List] -- [List of paragraphs]
+def text_to_paragraphs(filename):
     """
-
-    f = codecs.open("pg3300.txt", "r", "utf-8")
+    Partition file into separate paragraphs
+    :param filename: String
+    :return: List[String]
+    """
+    f = codecs.open(filename, "r", "utf-8")
     # Open, read and decode the file on utf-8-standard
 
     paragraphs = []
@@ -40,26 +36,20 @@ def text_to_paragraphs(file):
 
 # Task 1.3
 def filter_paragraphs(paragraphs):
-    """Remove (filter out) paragraphs containing the word "Gutenberg"
-    
-    Arguments:
-        para {[List[String]]}
-    
-    Returns:
-        [List[String]] 
+    """
+    Remove (filter out) paragraphs containing the word "Gutenberg"
+    :param paragrahps: List[String]
+    :return: List[String]
     """
     filter_obj = (filter(lambda p: "Gutenberg" not in p, paragraphs))
     return list(filter_obj)
 
 # Task 1.4
 def paragraphs_to_words(paragraphs):
-    """Tokenize paragraphs (split them into words)
-    
-    Arguments:
-        paragraphs {[List[String]]} 
-    
-    Returns:
-        [List[String]]
+    """
+    Tokenize paragraphs (split them into words)    
+    :param paragrahps: List[String]
+    :return: List[String]
     """
     for i, p in enumerate(paragraphs):
         paragraphs[i] = p.split(" ")
@@ -67,15 +57,11 @@ def paragraphs_to_words(paragraphs):
     
 # Task 1.5
 def remove_punctation(paragraphs):
-    """[Remove punctation]
-    
-    Arguments:
-        paragraphs {[List[Sting]]}
-    
-    Returns:
-        [List[String]]
     """
-
+    Removes !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\n\r\t and replace it with empty space
+    :param paragrahps: List[String]
+    :return: List[String]
+    """
     para = []
     for p in paragraphs:
         words = []
@@ -88,13 +74,10 @@ def remove_punctation(paragraphs):
     return para
 
 def lower(paragraphs):
-    """Convert everything to lower-case
-    
-    Arguments:
-        paragraphs {[List[String]]}
-    
-    Returns:
-        [List[String]]
+    """
+    Convert everything to lower-case
+    :param paragrahps: List[String]
+    :return: List[String]
     """
     para_lowered = []
     for p in paragraphs:
@@ -104,29 +87,13 @@ def lower(paragraphs):
         para_lowered.append(word_lowered)
     return para_lowered
 
-def get_paragraphs(paragraphs):
-    """Gives us the paragraphs?
-    
-    Arguments:
-        paragraphs {[List[String]]} 
-    
-    Returns:
-        [List[String]]
-    """
-    for i, words in enumerate(paragraphs):
-        words = remove_punctation(words)
-        paragraphs[i] = words
-    return paragraphs
 
-# Task 1.7
+# Task 1.6
 def stemWords(paragraphs):
-    """Use PorterStemmer to stem words (suffix stripping)
-    
-    Arguments:
-        paragraphs {[List[String]]} 
-    
-    Returns:
-        [List[String]]
+    """
+    Use the Porter stemmer algorithm to stem words (suffix stripping)
+    :param paragrahps: List[String]
+    :return: List[String]
     """
     stemmer = PorterStemmer() # Create a new Porter stemmer
     stemmed_para = []
@@ -136,4 +103,3 @@ def stemWords(paragraphs):
             stemmed_words.append(stemmer.stem(w))
         stemmed_para.append(stemmed_words)
     return stemmed_para
-
