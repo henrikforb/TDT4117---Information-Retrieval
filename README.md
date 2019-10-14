@@ -1,6 +1,7 @@
 # TDT4117-Information-Retrieval
 Repository for my assignments in TDT4117 - Information Retrieval at NTNU
-
+- Assignment 1 (add later)
+- Assignment 2 (add later)
 - [Assignment 3](TDT4117-Information-Retrieval/blob/master/TDT4117-Information-Retrieval/tree/master/Assignment3)
 
 ## About the course 
