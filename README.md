@@ -1,7 +1,7 @@
 # TDT4117-Information-Retrieval
 Repository for my assignments in TDT4117 - Information Retrieval at NTNU
 
-- [Assignment 3](TDT4117---Information-Retrieval/Assignment3)
+- [Assignment 3](TDT4117-Information-Retrieval/Assignment3)
 
 ## About the course 
 (from the [course page](https://www.ntnu.edu/studies/courses/TDT4117/2010#tab=omEmnet)) 
