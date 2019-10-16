@@ -35,13 +35,13 @@ def filter_out_stopwords(document_lst, lst):
 list_without_stop = filter_out_stopwords(document_henrik, stopwords_list)
 
 
-#creating a dictionary with the words and the wordcount
+#creating a dictionary with the words and the wordcount (bag of words/bow)
 def word_count_dict(lst):
     dict = gensim.corpora.Dictionary(lst)
     print(dict)
     dict = dict.token2id
     return dict
 
-dct = word_count_dict(list_without_stop)
+corpus = word_count_dict(list_without_stop)
 
-print(dct)
+print(corpus)

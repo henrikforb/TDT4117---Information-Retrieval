@@ -6,6 +6,9 @@ then LSI(Latent Semantic Indexing) weights.
 
 import gensim
 
+# FOR INFORMATION:
+# Løist corpus is created in anoter class that I, as we speak, do not have access to.
+
 # Task 3.1
 tfidf_model = gensim.models.TfidfModel(corpus)
 
