@@ -1,4 +1,4 @@
-# TDT4117-Information-Retrieval
+# TDT4117 - Information Retrieval
 Repository for my assignments in TDT4117 - Information Retrieval at NTNU
 - Assignment 1 (add later)
 - Assignment 2 (add later)
