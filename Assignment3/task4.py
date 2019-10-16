@@ -20,7 +20,7 @@ def report_weights(query_tfidf):
 
 print(report_weights(query_tfidf))
 
-# Task 4.3
+# Task 4.3 (thanks to VicJorgensen)
 def report_most_relevant_paragraphs(query):
     docs2similarity = enumerate(index[query])
     sorted_docs = sorted(docs2similarity, key=lambda kv: -kv[1])[:3]
